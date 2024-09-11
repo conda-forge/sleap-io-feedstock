@@ -30,7 +30,7 @@ requirements:
     - simplejson
     - h5py >=3.8.0
     - hdmf
-    - numpy <2.0.0
+    - numpy
     - opencv
     - pynwb
     - ndx-pose
