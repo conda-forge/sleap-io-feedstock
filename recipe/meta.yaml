@@ -1,5 +1,5 @@
 {% set name = "sleap-io" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sleap_io-{{ version }}.tar.gz
-  sha256: dccde5aab43b66845433dfbdc3a5a181287f1850735c4afa51fed1319f9da31c
+  sha256: ae74b5c1913da7031ed53f678f9ab346c502c2d95b523f61a2da2f085b2478b0
 
 build:
   noarch: python
@@ -30,7 +30,7 @@ requirements:
     - simplejson
     - h5py >=3.8.0
     - hdmf
-    - numpy <2.0.0
+    - numpy
     - opencv
     - pynwb
     - ndx-pose
