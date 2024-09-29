@@ -3,13 +3,11 @@ About sleap-io-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sleap-io-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/talmolab/sleap-io
+
 
 Package license: BSD-3-Clause
 
 Summary: Standalone utilities for working with pose data from SLEAP and other tools.
-
-Documentation: https://io.sleap.ai
 
 Current build status
 ====================
