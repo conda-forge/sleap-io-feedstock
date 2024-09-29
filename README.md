@@ -147,6 +147,3 @@ Feedstock Maintainers
 
 * [@talmo](https://github.com/talmo/)
 
-
-<!-- dummy commit to enable rerendering -->
-
