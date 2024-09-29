@@ -1,18 +1,19 @@
-{% set name = "sleap-io" %}
-{% set version = "0.1.9" %}
+context:
+  name: sleap-io
+  version: 0.1.9
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sleap_io-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/sleap_io-${{ version }}.tar.gz
   sha256: dd263878f80662aa0e00be8e06004d0505c792ecde91f1c1d417a1fb15bc72b0
 
 build:
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -34,22 +35,24 @@ requirements:
     - pynwb
     - ndx-pose <0.2.0
 
-test:
-  imports:
-    - sleap_io
-  commands:
-    - pip check
-  requires:
-    - pip
-    # https://github.com/conda-forge/opencv-feedstock/issues/401#issuecomment-2028099423
-    - libopencv *=headless*  # [linux]
+tests:
+  - python:
+      imports:
+        - sleap_io
+  - requirements:
+      run:
+        - pip
+        - if: linux
+          then: libopencv *=headless*
+    script:
+      - pip check
 
 about:
   summary: Standalone utilities for working with pose data from SLEAP and other tools.
   license: BSD-3-Clause
   license_file: LICENSE
-  home: https://github.com/talmolab/sleap-io
-  doc_url: https://io.sleap.ai
+  homepage: https://github.com/talmolab/sleap-io
+  documentation: https://io.sleap.ai
 
 extra:
   recipe-maintainers:
