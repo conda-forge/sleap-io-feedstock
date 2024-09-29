@@ -1,5 +1,5 @@
 {% set name = "sleap-io" %}
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sleap_io-{{ version }}.tar.gz
-  sha256: ae74b5c1913da7031ed53f678f9ab346c502c2d95b523f61a2da2f085b2478b0
+  sha256: dd263878f80662aa0e00be8e06004d0505c792ecde91f1c1d417a1fb15bc72b0
 
 build:
   noarch: python
