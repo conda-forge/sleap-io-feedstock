@@ -1,5 +1,3 @@
-schema_version: 1
-
 context:
   name: sleap-io
   version: 0.1.9
