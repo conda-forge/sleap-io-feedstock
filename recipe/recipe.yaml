@@ -33,7 +33,7 @@ requirements:
     - numpy
     - opencv
     - pynwb
-    - ndx-pose <0.2.0
+    - ndx-pose >=0.2.1
 
 tests:
   - python:
