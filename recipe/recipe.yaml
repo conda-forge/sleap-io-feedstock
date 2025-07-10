@@ -1,6 +1,6 @@
 context:
   name: sleap-io
-  version: "0.3.0"
+  version: "0.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sleap_io-${{ version }}.tar.gz
-  sha256: f260df32c9e3c94781ea2c58000c63e834a5ddfdc90f3d5f5e414f0447063549
+  sha256: 216dbc3bc7acdbdd8323e950583904ad051db8464bebdb62f7a7ff4622e7f490
 
 build:
   number: 0
@@ -34,6 +34,8 @@ requirements:
     - opencv
     - pynwb
     - ndx-pose >=0.2.1
+    - tqdm
+    - pyyaml
 
 tests:
   - python:
