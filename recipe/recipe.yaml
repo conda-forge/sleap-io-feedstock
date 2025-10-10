@@ -1,6 +1,6 @@
 context:
   name: sleap-io
-  version: "0.5.4"
+  version: "0.5.5"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sleap_io-${{ version }}.tar.gz
-  sha256: 8909db965657d0e46a8a94f40653bd900dbbe05fceb1e12110339c84d80bb1f8
+  sha256: b698d99d3fcb6fb549dd791f2ed3dee93fae9cf1a2d343ed762a73818e8b0fa1
 
 build:
   number: 0
