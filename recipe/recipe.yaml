@@ -11,7 +11,7 @@ source:
   sha256: b698d99d3fcb6fb549dd791f2ed3dee93fae9cf1a2d343ed762a73818e8b0fa1
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -46,7 +46,7 @@ tests:
       run:
         - pip
         - if: linux
-          then: libopencv *=headless*
+          then: libopencv *headless*
     script:
       - pip check
 
